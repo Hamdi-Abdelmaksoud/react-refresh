@@ -2,7 +2,7 @@ import PostsList from './components/PostsList';
 import MainHeader from './components/MainHeader';
 import { useState } from 'react';
 function App() {
-  const[modalIsVisible, setModalIsVisible]=useState(true);
+  const[modalIsVisible, setModalIsVisible]=useState(false);
   function hideModal(){
     setModalIsVisible(false);
   }
