@@ -1,5 +1,6 @@
 import { useState } from "react";
 import classes from './NewPost.module.css';
+import Modal from "./Modal";
 function NewPost({ onCancel ,onAddPost }) {
   const [entredBody, setEntredBody] = useState('');
   function changeBody(event) {
@@ -19,6 +20,7 @@ function NewPost({ onCancel ,onAddPost }) {
     onCancel();
   }
   return (
+    <Modal>
     <form className={classes.form} onSubmit={submitHandler}>
       <p>
         {/* htmlfor = for dans les formulaire html */}
@@ -35,6 +37,7 @@ function NewPost({ onCancel ,onAddPost }) {
         <button>Submit</button>
       </p>
     </form>
+    </Modal>
   );
 }
 
